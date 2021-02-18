@@ -1,4 +1,5 @@
 import { createMuiTheme } from '@material-ui/core';
+import { colors } from '../theme/colors';
 
 const theme = createMuiTheme({
     typography: {
@@ -7,7 +8,7 @@ const theme = createMuiTheme({
     overrides: {
         MuiCircularProgress: {
             colorPrimary: {
-                color: '#000',
+                color: colors.black,
             },
         },
     },

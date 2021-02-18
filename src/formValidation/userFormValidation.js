@@ -1,17 +1,8 @@
 import * as yup from 'yup';
-
-const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
-
-export const userFormValidationGenerator = (validationObj) => {
-    const userFormValidation = yup.object().shape({
-        userName: yup.string().required('User Name is a required field.'),
-        phoneNumber: yup.string().matches(phoneRegExp, 'Phone number is not valid').max(12),
-        animal: yup.string().required('This is a required field.'),
-        block_id: yup.string().required('This is a required field.'),
-        state: yup.string().required('This is a required field.'),
-        district: yup.string().required('This is a required field.'),
-        ...validationObj,
-    });
-
-    return userFormValidation;
-};
+export const contactFormValidation = yup.object().shape({
+    firstName: yup.string().required('First name is a required field.'),
+    email: yup.string().required('Email is a required field.'),
+    company: yup.string().required('Company is a required field.'),
+    industry: yup.string().required('Industry is a required field.'),
+    country: yup.string().required('Country is a required field.'),
+});

@@ -7,13 +7,13 @@ import cn from 'classnames';
 
 const useStyles = makeStyles({
     container: {
-        marginBottom: '0.5rem',
+        width: '100%',
     },
     wrapper: {
         width: '100%',
         outline: 'none',
         margin: 0,
-        fontSize: '16px',
+        fontSize: '1rem',
         fontWeight: 400,
         backgroundColor: colors.white,
         border: (props) => (props.error ? `solid 1px ${colors.red}` : `solid 1px ${colors.black}`),
@@ -29,20 +29,19 @@ const useStyles = makeStyles({
         color: (props) => (props.error ? colors.red : colors.black),
     },
     label: {
-        marginBottom: '0.5rem',
+        marginBottom: '0.4rem',
         fontSize: '0.85rem',
         fontWeight: 500,
-        color: colors.white
+        color: colors.white,
     },
     inputContainer: {
         width: '100%',
     },
-    fistChild:{
-        color: (props) => (props.error ? colors.red : colors.darkGray)+'!important',
+    fistChild: {
+        color: (props) => (props.error ? colors.red : colors.darkGray) + '!important',
     },
     input: {
         width: '100%',
-        fontFamily: 'aino-regular',
         fontSize: '0.75rem',
         border: 'none',
         outline: 'none',
@@ -71,9 +70,11 @@ const SelectWithLabelIcon = ({
     iscompulsory,
     placeholder,
     options,
+    isCountryType,
     ...props
 }) => {
     const classes = useStyles({ error });
+    console.log(options);
     return (
         <Box className={classes.container}>
             <Typography className={classes.label}>
@@ -96,6 +97,7 @@ const SelectWithLabelIcon = ({
                         {options.map((item, i) => (
                             <option key={i} value={item.value}>
                                 {item.label}
+                                {/* {isCountryType ?<img src="https://restcountries.eu/data/afg.svg"/> : ''} */}
                             </option>
                         ))}
                     </select>
@@ -120,5 +122,6 @@ SelectWithLabelIcon.propTypes = {
     errorMsg: PropTypes.object,
     options: PropTypes.array,
     iscompulsory: PropTypes.bool,
+    isCountryType: PropTypes.bool,
 };
 export default SelectWithLabelIcon;

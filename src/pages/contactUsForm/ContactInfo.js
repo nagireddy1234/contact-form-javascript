@@ -7,6 +7,9 @@ const useStyles = makeStyles({
     wrapper: {
         padding: '1rem',
         paddingTop: '6.5rem',
+        '@media (max-width:649px)': {
+            padding: '3rem 1rem 2rem 1rem',
+        },
     },
     whiteLabel: {
         color: colors.white,

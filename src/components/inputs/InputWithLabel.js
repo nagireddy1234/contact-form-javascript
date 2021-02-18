@@ -6,14 +6,11 @@ import { colors } from '../../theme/colors';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 
 const useStyles = makeStyles({
-    container: {
-        marginBottom: '0.5rem',
-    },
     wrapper: {
         width: '100%',
     },
     label: {
-        marginBottom: '0.5rem',
+        marginBottom: '0.4rem',
         fontSize: '0.85rem',
         fontWeight: 500,
         width: '100%',
@@ -25,7 +22,7 @@ const useStyles = makeStyles({
         '& ::placeholder': {
             color: colors.primary,
             opacity: 1,
-            fontSize: '0.75rem',
+            fontSize: '0.85rem',
         },
     },
     border: (props) => (props.error ? `solid 1px ${colors.red}` : `solid 1px ${colors.black}`),
@@ -44,7 +41,7 @@ const InputWithLabel = ({ label, inputRegister, error, iscompulsory, errorMsg, e
     const classes = useStyles();
 
     return (
-        <Box className={classes.container}>
+        <Box className={classes.wrapper}>
             <Typography className={classes.label}>
                 {label} {iscompulsory && <span className={classes.white}>*</span>}
             </Typography>
