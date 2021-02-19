@@ -11,6 +11,7 @@ import CustomCheckBox from '../../components/checkbox/customCheckBox';
 import CustomButton from '../../components/buttons/CustomButton';
 import ModalComponent from '../../components/modal/ModalComponent';
 import { toast } from 'react-toastify';
+import Slide from 'react-reveal/Slide';
 
 const useStyles = makeStyles({
     rootWrapper: {
@@ -111,61 +112,64 @@ const ContactUsForm = () => {
                 openOrNot={modal}
                 handleClose={() => setOpenModal(false)}
             />
+
             <Box className={classes.rootWrapper}>
-                <Grid container spacing={3}>
-                    <Grid item xs={12} sm={12} md={4} lg={4} xl={4} className={classes.contactInfo}>
-                        <ContactInfo />
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={8} lg={8} xl={8} className={classes.formInfo}>
-                        <Typography className={classes.heading}>Contact us</Typography>
-                        <form onSubmit={handleSubmit(submit)}>
-                            <Grid container spacing={3} className={classes.userDetailsContainer}>
-                                <UserDetails inputRegister={register} getValues={getValues} errors={errors} />
-                            </Grid>
-                            <Grid container spacing={3} className={classes.companyDetailsContainer}>
-                                <CompanyInfo inputRegister={register} getValues={getValues} errors={errors} />
-                                <Grid item xs={12} sm={12} md={7} lg={7} xl={7}>
-                                    <Grid
-                                        container
-                                        alignItems="center"
-                                        justify="flex-start"
-                                        wrap="nowrap"
-                                        className={classes.containerCheckBoxLabel}
-                                    >
-                                        <Box className={classes.checkBoxContainer}>
-                                            <CustomCheckBox onChange={handleTermsConditions} />
-                                        </Box>
-                                        <Box className={classes.labelContainer}>
-                                            <span className={classes.tcTitle}>
-                                                By submitting this form I accept privacy
-                                                <a> policy and cookie policy.</a>
-                                            </span>
-                                        </Box>
+                <Slide top duration={800}>
+                    <Grid container spacing={3}>
+                        <Grid item xs={12} sm={12} md={4} lg={4} xl={4} className={classes.contactInfo}>
+                            <ContactInfo />
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={8} lg={8} xl={8} className={classes.formInfo}>
+                            <Typography className={classes.heading}>Contact us</Typography>
+                            <form onSubmit={handleSubmit(submit)}>
+                                <Grid container spacing={3} className={classes.userDetailsContainer}>
+                                    <UserDetails inputRegister={register} getValues={getValues} errors={errors} />
+                                </Grid>
+                                <Grid container spacing={3} className={classes.companyDetailsContainer}>
+                                    <CompanyInfo inputRegister={register} getValues={getValues} errors={errors} />
+                                    <Grid item xs={12} sm={12} md={7} lg={7} xl={7}>
+                                        <Grid
+                                            container
+                                            alignItems="center"
+                                            justify="flex-start"
+                                            wrap="nowrap"
+                                            className={classes.containerCheckBoxLabel}
+                                        >
+                                            <Box className={classes.checkBoxContainer}>
+                                                <CustomCheckBox onChange={handleTermsConditions} />
+                                            </Box>
+                                            <Box className={classes.labelContainer}>
+                                                <span className={classes.tcTitle}>
+                                                    By submitting this form I accept privacy
+                                                    <a> policy and cookie policy.</a> *
+                                                </span>
+                                            </Box>
+                                        </Grid>
+                                        <Grid
+                                            container
+                                            alignItems="center"
+                                            justify="flex-start"
+                                            wrap="nowrap"
+                                            className={classes.containerCheckBoxLabel}
+                                        >
+                                            <Box className={classes.checkBoxContainer}>
+                                                <CustomCheckBox />
+                                            </Box>
+                                            <Box className={classes.labelContainer}>
+                                                <span className={classes.tcTitle}>
+                                                    I would like to receive your newsletter.
+                                                </span>
+                                            </Box>
+                                        </Grid>
                                     </Grid>
-                                    <Grid
-                                        container
-                                        alignItems="center"
-                                        justify="flex-start"
-                                        wrap="nowrap"
-                                        className={classes.containerCheckBoxLabel}
-                                    >
-                                        <Box className={classes.checkBoxContainer}>
-                                            <CustomCheckBox />
-                                        </Box>
-                                        <Box className={classes.labelContainer}>
-                                            <span className={classes.tcTitle}>
-                                                I would like to receive your newsletter.
-                                            </span>
-                                        </Box>
+                                    <Grid item xs={12} sm={12} md={5} lg={5} xl={5}>
+                                        <CustomButton label="Send" type="submit" className={classes.button} />
                                     </Grid>
                                 </Grid>
-                                <Grid item xs={12} sm={12} md={5} lg={5} xl={5}>
-                                    <CustomButton label="Send" type="submit" className={classes.button} />
-                                </Grid>
-                            </Grid>
-                        </form>
+                            </form>
+                        </Grid>
                     </Grid>
-                </Grid>
+                </Slide>
             </Box>
         </>
     );

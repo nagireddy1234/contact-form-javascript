@@ -15,11 +15,13 @@ const App = () => {
             <ToastContainer closeButton={CloseButton} hideProgressBar={true} />
             <MuiThemeProvider theme={theme}>
                 <Router>
-                    <Suspense fallback={<Loader initial={true} />}>
+                    <Suspense fallback={<Loader />}>
                         <Switch>
-                            {rootRoutes.map((item, i) => (
-                                <Route key={i} exact path={item.path} component={item.component} />
-                            ))}
+                            <bounce>
+                                {rootRoutes.map((item, i) => (
+                                    <Route key={i} exact path={item.path} component={item.component} />
+                                ))}
+                            </bounce>
                         </Switch>
                     </Suspense>
                 </Router>

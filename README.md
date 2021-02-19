@@ -4,7 +4,7 @@
 
 ⚡️ Optimized Performance with Webpack\
 ⚡️ Optimzed SEO with react-helmet\
-⚡️ One Page Layout\
+⚡️ Used PropTypes for checking props type\
 ⚡️ Fully Responsive with material-ui\
 ⚡️ Valid HTML5 & CSS3\
 ⚡️ Fetched data using Axios\
