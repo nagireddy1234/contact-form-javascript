@@ -1,11 +1,12 @@
 import React from 'react';
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
+import { makeStyles, createStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import { Grid, Typography } from '@material-ui/core';
 import { CheckCircle } from '@material-ui/icons';
 import { colors } from '../../theme/colors';
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) =>
     createStyles({
@@ -36,11 +37,10 @@ const useStyles = makeStyles((theme) =>
             lineHeight: '2.2rem',
             color: colors.black,
             textAlign: 'center',
-            fontWeight: 100
+            fontWeight: 100,
         },
     })
 );
-
 
 export const ModalComponent = ({ msg, handleClose, openOrNot, icon, children }) => {
     const classes = useStyles();
@@ -57,7 +57,8 @@ export const ModalComponent = ({ msg, handleClose, openOrNot, icon, children }) 
                 BackdropComponent={Backdrop}
                 BackdropProps={{
                     timeout: 500,
-                }}>
+                }}
+            >
                 <Fade in={openOrNot}>
                     <Grid container alignItems="center" direction="column" justify="center" className={classes.paper}>
                         {icon ? icon : <CheckCircle className={classes.icon} />}
@@ -70,4 +71,11 @@ export const ModalComponent = ({ msg, handleClose, openOrNot, icon, children }) 
     );
 };
 
+ModalComponent.propTypes = {
+    msg: PropTypes.string,
+    handleClose: PropTypes.func,
+    openOrNot: PropTypes.bool,
+    icon: PropTypes.string,
+    children: PropTypes.element,
+};
 export default ModalComponent;

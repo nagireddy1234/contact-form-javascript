@@ -8,25 +8,24 @@ import { ToastContainer } from 'react-toastify';
 import { Close } from '@material-ui/icons';
 import 'react-toastify/dist/ReactToastify.css';
 
-
-const  App = ()=> {
+const App = () => {
     const CloseButton = ({ closeToast }) => <Close onClick={closeToast} />;
-        return (
-            <React.Fragment>
-                <ToastContainer closeButton={CloseButton} />
-                <MuiThemeProvider theme={theme}>
-                    <Router>
-                        <Suspense fallback={<Loader initial={true} />}>
-                            <Switch>
-                                {rootRoutes.map((item, i) => (
-                                    <Route key={i} exact path={item.path} component={item.component} />
-                                ))}
-                            </Switch>
-                        </Suspense>
-                    </Router>
-                </MuiThemeProvider>
-            </React.Fragment>
-        );
-}
+    return (
+        <React.Fragment>
+            <ToastContainer closeButton={CloseButton} hideProgressBar={true} />
+            <MuiThemeProvider theme={theme}>
+                <Router>
+                    <Suspense fallback={<Loader initial={true} />}>
+                        <Switch>
+                            {rootRoutes.map((item, i) => (
+                                <Route key={i} exact path={item.path} component={item.component} />
+                            ))}
+                        </Switch>
+                    </Suspense>
+                </Router>
+            </MuiThemeProvider>
+        </React.Fragment>
+    );
+};
 
 export default App;

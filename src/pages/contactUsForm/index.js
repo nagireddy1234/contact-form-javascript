@@ -96,7 +96,7 @@ const ContactUsForm = () => {
         if (isTcAccepted) {
             setOpenModal(true);
         } else {
-            toast.error('Please accept the terms and conditions first.');
+            toast.error('Please accept the terms and conditions.');
         }
     };
 

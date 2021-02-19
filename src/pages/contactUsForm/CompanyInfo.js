@@ -9,6 +9,7 @@ import { useCountries } from '../../hooks/useCountries';
 
 const CompanyInfo = ({ inputRegister, errors }) => {
     const countries = useCountries();
+    console.log(geography, industry);
     return (
         <>
             <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
@@ -51,7 +52,7 @@ const CompanyInfo = ({ inputRegister, errors }) => {
                     iscompulsory={false}
                     label="Operating geography"
                     placeholder="N/A"
-                    name="operatingGeography"
+                    name="geography"
                     options={geography}
                     inputRegister={inputRegister}
                 />

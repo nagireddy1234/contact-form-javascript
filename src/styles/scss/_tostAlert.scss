@@ -1,10 +1,10 @@
 .Toastify__toast {
-    background-color: $white;
+    background-color: $red;
     box-shadow: 0px 0px 20px $boxShadow;
     .Toastify__toast-body {
         font-size: 1.25rem;
         font-family: 'CircularXXWeb-Book';
-        color: $red;
+        color: $white;
         padding: 1rem 0;
     }
     .Toastify__progress-bar {

@@ -45,7 +45,7 @@ const useStyles = makeStyles({
         fontSize: '0.75rem',
         border: 'none',
         outline: 'none',
-        padding: '0.5rem',
+        padding: '0.6rem',
         color: colors.black,
         backgroundColor: colors.white,
         '& ::-ms-expand': {
@@ -53,6 +53,8 @@ const useStyles = makeStyles({
         },
         '& option': {
             width: '50rem',
+            backgroundColor: 'red',
+            color: 'green',
         },
     },
     icon: {
@@ -91,11 +93,12 @@ const SelectWithLabelIcon = ({
             >
                 <Box className={classes.inputContainer}>
                     <select ref={inputRegister} className={cn(classes.input)} error={error} {...props}>
-                        <option value="" hidden className={classes.fistChild}>
+                        {/* <option value="" hidden className={classes.fistChild}>
                             {placeholder}
-                        </option>
+                        </option> */}
+
                         {options.map((item, i) => (
-                            <option key={i} value={item.value}>
+                            <option key={i} value={item.value} className={classes.option}>
                                 {item.label}
                                 {/* {isCountryType ?<img src="https://restcountries.eu/data/afg.svg"/> : ''} */}
                             </option>
