@@ -37,9 +37,6 @@ const useStyles = makeStyles({
     inputContainer: {
         width: '100%',
     },
-    fistChild: {
-        color: (props) => (props.error ? colors.red : colors.darkGray) + '!important',
-    },
     input: {
         width: '100%',
         fontSize: '0.875rem',
@@ -51,14 +48,6 @@ const useStyles = makeStyles({
         '& ::-ms-expand': {
             display: 'none',
         },
-        '& option': {
-            width: '50rem',
-            backgroundColor: 'red',
-            color: 'green',
-        },
-    },
-    icon: {
-        color: (props) => (props.error ? colors.red : colors.darkGray),
     },
     white: {
         color: colors.white,
@@ -75,11 +64,9 @@ const SelectWithLabelIcon = ({
     iscompulsory,
     placeholder,
     options,
-    isCountryType,
     ...props
 }) => {
     const classes = useStyles({ error });
-    console.log(options);
     return (
         <Box className={classes.container}>
             <Typography className={classes.label}>
@@ -96,17 +83,14 @@ const SelectWithLabelIcon = ({
             >
                 <Box className={classes.inputContainer}>
                     <select ref={inputRegister} className={cn(classes.input)} error={error} {...props}>
-                        <option value="" hidden className={classes.fistChild}>
+                        <option value="" hidden>
                             {placeholder}
                         </option>
-                        {/* <Box> */}
                         {options.map((item, i) => (
                             <option key={i} value={item.value} className={classes.option}>
                                 {item.label}
-                                {/* {isCountryType ?<img src="https://restcountries.eu/data/afg.svg"/> : ''} */}
                             </option>
                         ))}
-                        {/* </Box> */}
                     </select>
                 </Box>
             </Grid>
@@ -125,10 +109,9 @@ SelectWithLabelIcon.propTypes = {
     label: PropTypes.string,
     icon: PropTypes.element,
     name: PropTypes.string,
-    inputRegister: PropTypes.any,
+    inputRegister: PropTypes.func,
     errorMsg: PropTypes.object,
     options: PropTypes.array,
     iscompulsory: PropTypes.bool,
-    isCountryType: PropTypes.bool,
 };
 export default SelectWithLabelIcon;

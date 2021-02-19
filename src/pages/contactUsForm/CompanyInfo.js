@@ -6,6 +6,7 @@ import SelectWithLabelIcon from '../../components/inputs/SelectWithLabelIcon';
 import { geography, industry } from '../../data/contact';
 import TextArea from '../../components/inputs/TextArea';
 import { useCountries } from '../../hooks/useCountries';
+import CountrySelectInput from '../../components/inputs/CountrySelectInput';
 
 const CompanyInfo = ({ inputRegister, errors }) => {
     const countries = useCountries();
@@ -35,7 +36,7 @@ const CompanyInfo = ({ inputRegister, errors }) => {
                 />
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-                <SelectWithLabelIcon
+                <CountrySelectInput
                     iscompulsory={true}
                     label="Country"
                     placeholder="N/A"

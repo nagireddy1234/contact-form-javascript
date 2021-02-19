@@ -14,10 +14,10 @@ const useStyles = makeStyles({
             fontSize: '1rem',
             fontWeight: 400,
             backgroundColor: colors.white,
-            color: (props) => (props.error ? `${colors.red}` : `${colors.black}`),
+            color: colors.black,
             border: (props) => `solid 1px ${props.error ? colors.red : colors.black}`,
             '&::placeholder': {
-                color: (props) => (props.error ? `${colors.red}` : `${colors.black}`),
+                color: colors.black,
                 fontSize: '0.75rem',
             },
         },

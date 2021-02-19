@@ -23,6 +23,9 @@ const useStyles = makeStyles((theme) =>
             maxWidth: '33%',
             marginLeft: 'auto',
             marginRight: 'auto',
+            '&:focus':{
+                outline: 'none'
+            },
             '@media (max-width:500px)': {
                 padding: '18px',
                 maxWidth: '75%',

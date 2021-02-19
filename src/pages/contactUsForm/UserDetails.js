@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Grid } from '@material-ui/core';
 import InputWithLabel from '../../components/inputs/InputWithLabel';
 
-const UserDetails = ({ inputRegister, errors, getFullInfo }) => {
+const UserDetails = ({ inputRegister, errors }) => {
     return (
         <>
             <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>

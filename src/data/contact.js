@@ -11,15 +11,15 @@ export const industry = [
 ];
 export const geography = [
     {
-        value: 'N/A',
-        lable: 'N/A',
+        value: 'National',
+        label: 'Regional',
     },
     {
         value: 'Regional',
-        lable: 'Regional',
+        label: 'Regional',
     },
     {
         value: 'Global',
-        lable: 'Global',
+        label: 'Global',
     },
 ];

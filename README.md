@@ -87,7 +87,7 @@ $ sudo npm install --unsafe-perm=true --allow-root
 Once your server has started, go to this url `http://localhost:3000/` and you will see the website running on a Development Server:
 
 <h2 align="center">
-  <img src="https://res.cloudinary.com/daoh1a4ac/image/upload/v1613330206/Screenshot_2021-02-14_at_21.16.16_jhglmj.png" alt="modularbank-contact-form" width="100%">
+  <img src="https://res.cloudinary.com/daoh1a4ac/image/upload/v1613748889/Screenshot_2021-02-19_at_17.33.40_q9eomt.png" alt="modularbank-contact-form" width="100%" />(https://modularbank-contact.netlify.app/)
 </h2>
 
 ## Deployment 📦

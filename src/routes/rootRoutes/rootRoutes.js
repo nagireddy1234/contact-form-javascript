@@ -1,6 +1,7 @@
-import ContactUsForm from '../../pages/contactUsForm';
-import Home from '../../pages/home';
-import pageNotFound from '../../pages/pageNotFound';
+import React from 'react';
+const ContactUsForm = React.lazy(() => import('../../pages/contactUsForm'));
+const Home = React.lazy(() => import('../../pages/home'));
+const pageNotFound = React.lazy(() => import('../../pages/pageNotFound'));
 
 export const rootRoutes = [
     { path: '/', component: Home },

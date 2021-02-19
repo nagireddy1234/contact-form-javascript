@@ -20,5 +20,6 @@ export const colors = {
     green: '#4CAF50',
     skyblue: '#6575EB',
     green2:'#07A571',
-    darkRed: '#de3c4b'
+    darkRed: '#de3c4b',
+    lightGray2: '#868686'
 };

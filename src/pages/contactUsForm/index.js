@@ -7,11 +7,11 @@ import UserDetails from './UserDetails';
 import { colors } from '../../theme/colors';
 import ContactInfo from './ContactInfo';
 import CompanyInfo from './CompanyInfo';
-import CustomCheckBox from '../../components/checkbox/CustomCheckBox';
 import CustomButton from '../../components/buttons/CustomButton';
 import ModalComponent from '../../components/modal/ModalComponent';
 import { toast } from 'react-toastify';
 import Slide from 'react-reveal/Slide';
+import TCNewsLetter from './TCNewsLetter';
 
 const useStyles = makeStyles({
     rootWrapper: {
@@ -88,13 +88,15 @@ const ContactUsForm = () => {
     const classes = useStyles();
     const [modal, setOpenModal] = useState(false);
     const [isTcAccepted, setIsTcAccepted] = useState(false);
+    const [isNewsLetterAccepted, setIsNewsLetterAccepted] = useState(false);
 
     const { register, errors, handleSubmit, getValues } = useForm({
         resolver: yupResolver(contactFormValidation),
     });
 
-    const submit = async () => {
+    const submit =  (data) => {
         if (isTcAccepted) {
+            console.log({...data, isNewsLetterAccepted});
             setOpenModal(true);
         } else {
             toast.error('Please accept the terms and conditions.');
@@ -105,6 +107,10 @@ const ContactUsForm = () => {
         setIsTcAccepted(e.target.checked);
     };
 
+    const handleNewsLetter = (e) => {
+        setIsNewsLetterAccepted(e.target.checked);
+    };
+
     return (
         <>
             <ModalComponent
@@ -112,7 +118,6 @@ const ContactUsForm = () => {
                 openOrNot={modal}
                 handleClose={() => setOpenModal(false)}
             />
-
             <Box className={classes.rootWrapper}>
                 <Slide top duration={800}>
                     <Grid container spacing={3}>
@@ -127,41 +132,10 @@ const ContactUsForm = () => {
                                 </Grid>
                                 <Grid container spacing={3} className={classes.companyDetailsContainer}>
                                     <CompanyInfo inputRegister={register} getValues={getValues} errors={errors} />
-                                    <Grid item xs={12} sm={12} md={7} lg={7} xl={7}>
-                                        <Grid
-                                            container
-                                            alignItems="center"
-                                            justify="flex-start"
-                                            wrap="nowrap"
-                                            className={classes.containerCheckBoxLabel}
-                                        >
-                                            <Box className={classes.checkBoxContainer}>
-                                                <CustomCheckBox onChange={handleTermsConditions} />
-                                            </Box>
-                                            <Box className={classes.labelContainer}>
-                                                <span className={classes.tcTitle}>
-                                                    By submitting this form I accept privacy
-                                                    <a> policy and cookie policy.</a> *
-                                                </span>
-                                            </Box>
-                                        </Grid>
-                                        <Grid
-                                            container
-                                            alignItems="center"
-                                            justify="flex-start"
-                                            wrap="nowrap"
-                                            className={classes.containerCheckBoxLabel}
-                                        >
-                                            <Box className={classes.checkBoxContainer}>
-                                                <CustomCheckBox />
-                                            </Box>
-                                            <Box className={classes.labelContainer}>
-                                                <span className={classes.tcTitle}>
-                                                    I would like to receive your newsletter.
-                                                </span>
-                                            </Box>
-                                        </Grid>
-                                    </Grid>
+                                    <TCNewsLetter
+                                        handleTConChange={handleTermsConditions}
+                                        handleNewLetterOnchage={handleNewsLetter}
+                                    />
                                     <Grid item xs={12} sm={12} md={5} lg={5} xl={5}>
                                         <CustomButton label="Send" type="submit" className={classes.button} />
                                     </Grid>
