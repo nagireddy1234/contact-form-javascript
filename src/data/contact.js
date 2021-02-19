@@ -1,6 +1,5 @@
 export const industry = [
     { value: 'Automotive', label: 'Automotive' },
-    { value: 'Banking', label: 'Banking' },
     { value: 'Consulting', label: 'Consulting' },
     { value: 'Finance', label: 'Finance' },
     { value: 'Healthcare', label: 'Healthcare' },

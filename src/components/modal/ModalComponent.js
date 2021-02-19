@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) =>
             marginRight: 'auto',
             '@media (max-width:500px)': {
                 padding: '18px',
-                maxWidth: '94%',
+                maxWidth: '75%',
             },
         },
         icon: {

@@ -10,8 +10,8 @@ const useStyles = makeStyles({
         width: '100%',
     },
     label: {
-        marginBottom: '0.4rem',
-        fontSize: '0.85rem',
+        marginBottom: '0.2rem',
+        fontSize: '0.875rem',
         fontWeight: 500,
         width: '100%',
         color: colors.white,
@@ -22,7 +22,7 @@ const useStyles = makeStyles({
         '& ::placeholder': {
             color: colors.primary,
             opacity: 1,
-            fontSize: '0.85rem',
+            fontSize: '0.875rem',
         },
     },
     border: (props) => (props.error ? `solid 1px ${colors.red}` : `solid 1px ${colors.black}`),

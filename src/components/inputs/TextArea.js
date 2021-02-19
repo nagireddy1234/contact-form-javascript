@@ -15,10 +15,10 @@ const useStyles = makeStyles({
     },
     label: {
         marginBottom: '0.5rem',
-        fontSize: '0.85rem',
+        fontSize: '0.875rem',
         fontWeight: 500,
         width: '100%',
-        color: colors.white
+        color: colors.white,
     },
     input: {
         width: '100%',
@@ -26,7 +26,7 @@ const useStyles = makeStyles({
         '& ::placeholder': {
             color: colors.primary,
             opacity: 1,
-            fontSize: '0.75rem',
+            fontSize: '0.875rem',
         },
     },
     border: (props) => (props.error ? `solid 1px ${colors.red}` : `solid 1px ${colors.primary}`),

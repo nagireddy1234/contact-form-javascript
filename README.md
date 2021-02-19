@@ -4,14 +4,18 @@
 
 ⚡️ Optimized Performance with Webpack\
 ⚡️ Optimzed SEO with react-helmet\
-⚡️ Used PropTypes for checking props type\
-⚡️ Fully Responsive with material-ui\
-⚡️ Valid HTML5 & CSS3\
+⚡️ Used Redux from state management\
 ⚡️ Fetched data using Axios\
 ⚡️ client side validation using react-hook-form/yup\
-⚡️ Used babel to convert the code from ECMAScript 2015+ to a backwards compatible version
+⚡️ Used babel for Javascript transcompiling\
+⚡️ Fully Responsive with material-ui\
+⚡️ Added page transiton by using react-reveal\
+⚡️ Added notification on submit by using react-toastify\
+⚡️ Added Routing by using react-router-dom\
+⚡️ Used PropTypes for checking props type\
+⚡️ Valid HTML5 & CSS3\
 
-To view a Live website, **[click here]()**
+To view a Live website, **[click here](https://modularbank-contact.netlify.app/)**
 
 ## Getting Started 🚀
 
@@ -99,6 +103,7 @@ I have used [Netlify](https://netlify.com) for deployment and I highly recommend
 -   [React-router-dom](https://reactrouter.com/web/example/auth-workflow) - For routing purpose
 -   [Sass](https://sass-lang.com/documentation/) - CSS extension language
 -   [react-hook-form](https://react-hook-form.com/) - Performant, flexible and extensible forms with easy-to-use validation.
+    and Many more...!
 
 ## Authors
 

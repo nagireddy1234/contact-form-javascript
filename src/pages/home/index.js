@@ -67,7 +67,7 @@ const index = () => {
         <Zoom duration={500}>
             <Box className={classes.wrapper}>
                 <Grid container alignItems="center" className={classes.home}>
-                    <Typography className={classes.title}>Modularbank Contact-form demo</Typography>
+                    <Typography className={classes.title}>Modularbank Contact-form Demo</Typography>
                     <CustomButton
                         label="Go To contact us page"
                         onClick={gotoContactUsPage}

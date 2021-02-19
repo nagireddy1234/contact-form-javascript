@@ -7,7 +7,7 @@ import UserDetails from './UserDetails';
 import { colors } from '../../theme/colors';
 import ContactInfo from './ContactInfo';
 import CompanyInfo from './CompanyInfo';
-import CustomCheckBox from '../../components/checkbox/customCheckBox';
+import CustomCheckBox from '../../components/checkbox/CustomCheckBox';
 import CustomButton from '../../components/buttons/CustomButton';
 import ModalComponent from '../../components/modal/ModalComponent';
 import { toast } from 'react-toastify';

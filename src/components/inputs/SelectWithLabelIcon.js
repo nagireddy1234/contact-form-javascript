@@ -29,8 +29,8 @@ const useStyles = makeStyles({
         color: (props) => (props.error ? colors.red : colors.black),
     },
     label: {
-        marginBottom: '0.4rem',
-        fontSize: '0.85rem',
+        marginBottom: '0.2rem',
+        fontSize: '0.875rem',
         fontWeight: 500,
         color: colors.white,
     },
@@ -42,7 +42,7 @@ const useStyles = makeStyles({
     },
     input: {
         width: '100%',
-        fontSize: '0.75rem',
+        fontSize: '0.875rem',
         border: 'none',
         outline: 'none',
         padding: '0.6rem',
@@ -62,6 +62,9 @@ const useStyles = makeStyles({
     },
     white: {
         color: colors.white,
+    },
+    option: {
+        padding: '1rem',
     },
 });
 const SelectWithLabelIcon = ({
@@ -93,16 +96,17 @@ const SelectWithLabelIcon = ({
             >
                 <Box className={classes.inputContainer}>
                     <select ref={inputRegister} className={cn(classes.input)} error={error} {...props}>
-                        {/* <option value="" hidden className={classes.fistChild}>
+                        <option value="" hidden className={classes.fistChild}>
                             {placeholder}
-                        </option> */}
-
+                        </option>
+                        {/* <Box> */}
                         {options.map((item, i) => (
                             <option key={i} value={item.value} className={classes.option}>
                                 {item.label}
                                 {/* {isCountryType ?<img src="https://restcountries.eu/data/afg.svg"/> : ''} */}
                             </option>
                         ))}
+                        {/* </Box> */}
                     </select>
                 </Box>
             </Grid>

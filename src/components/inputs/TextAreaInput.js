@@ -19,7 +19,7 @@ const useStyles = makeStyles({
             border: (props) => `solid 1px ${props.error ? colors.red : colors.black}`,
             '&::placeholder': {
                 color: (props) => (props.error ? `${colors.red}` : `${colors.black}`),
-                fontSize: '0.75rem',
+                fontSize: '0.875rem',
             },
         },
     },

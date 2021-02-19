@@ -19,7 +19,7 @@ const App = () => {
                         <Switch>
                             <bounce>
                                 {rootRoutes.map((item, i) => (
-                                    <Route key={i} exact path={item.path} component={item.component} />
+                                    <Route exact key={i} path={item.path} component={item.component} />
                                 ))}
                             </bounce>
                         </Switch>

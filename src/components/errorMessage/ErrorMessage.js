@@ -5,7 +5,7 @@ import { colors } from '../../theme/colors';
 
 const useStyles = makeStyles({
     error: {
-        fontSize: '0.9rem',
+        fontSize: '0.875rem',
         color: colors.red,
         marginTop: '0.5rem',
     },
