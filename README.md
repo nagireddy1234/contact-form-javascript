@@ -15,7 +15,7 @@
 ⚡️ Used PropTypes for checking props type\
 ⚡️ Valid HTML5 & CSS3\
 
-To view a Live website, **[click here](https://modularbank-contact.netlify.app/)**
+To view a Live website, **[click here](https://modularbabk-contact.netlify.app/)**
 
 ## Getting Started 🚀
 
@@ -87,7 +87,7 @@ $ sudo npm install --unsafe-perm=true --allow-root
 Once your server has started, go to this url `http://localhost:3000/` and you will see the website running on a Development Server:
 
 <h2 align="center">
-  <img src="https://res.cloudinary.com/daoh1a4ac/image/upload/v1613748889/Screenshot_2021-02-19_at_17.33.40_q9eomt.png" alt="modularbank-contact-form" width="100%" />(https://modularbank-contact.netlify.app/)
+  <img src="https://res.cloudinary.com/daoh1a4ac/image/upload/v1613748889/Screenshot_2021-02-19_at_17.33.40_q9eomt.png" alt="modularbank-contact-form" width="100%" />(https://modularbabk-contact.netlify.app/)
 </h2>
 
 ## Deployment 📦
