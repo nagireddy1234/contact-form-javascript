@@ -1,6 +1,6 @@
 import { Box, Grid, makeStyles } from '@material-ui/core';
 import React from 'react';
-import CustomCheckBox from '../../components/checkbox/CustomCheckBox';
+import CustomCheckBox from '../../components/checkbox/customCheckBox';
 import { colors } from '../../theme/colors';
 import PropTypes from 'prop-types';
 
