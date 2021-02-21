@@ -7,6 +7,7 @@ import { rootRoutes } from './routes/rootRoutes/rootRoutes';
 import { ToastContainer } from 'react-toastify';
 import { Close } from '@material-ui/icons';
 import 'react-toastify/dist/ReactToastify.css';
+const Notfound = React.lazy(() => import('./pages/pageNotFound'));
 
 const App = () => {
     const CloseButton = ({ closeToast }) => <Close onClick={closeToast} />;
@@ -17,11 +18,10 @@ const App = () => {
                 <Router>
                     <Suspense fallback={<Loader />}>
                         <Switch>
-                            <bounce>
-                                {rootRoutes.map((item, i) => (
-                                    <Route exact key={i} path={item.path} component={item.component} />
-                                ))}
-                            </bounce>
+                            {rootRoutes.map((item, i) => (
+                                <Route exact key={i} path={item.path} component={item.component} />
+                            ))}
+                            <Route path="*" component={Notfound} />
                         </Switch>
                     </Suspense>
                 </Router>

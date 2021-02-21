@@ -94,9 +94,9 @@ const ContactUsForm = () => {
         resolver: yupResolver(contactFormValidation),
     });
 
-    const submit =  (data) => {
+    const submit = (data) => {
         if (isTcAccepted) {
-            console.log({...data, isNewsLetterAccepted});
+            console.log({ ...data, isNewsLetterAccepted });
             setOpenModal(true);
         } else {
             toast.error('Please accept the terms and conditions.');

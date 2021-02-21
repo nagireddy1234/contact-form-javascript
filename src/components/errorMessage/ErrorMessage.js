@@ -13,7 +13,6 @@ const useStyles = makeStyles({
 
 const ErrorMessage = ({ errorMsg }) => {
     const classes = useStyles();
-    // console.log('error', errorMsg);
     return <p className={classes.error}>{errorMsg}</p>;
 };
 
